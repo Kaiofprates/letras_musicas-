@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jan 14 00:27:43 2018
-
 @author: kaio
 """
 
@@ -26,6 +25,9 @@ def busca():
     texto = (letra['mus'][0]['text'])
     if texto:
         letra1.insert(INSERT, texto)
+        sav = open(mus+".txt","w")
+        sav.write(str(texto))
+        sav.close()
     else:
         letra1.insert(INSERT, "Letra não encontrada")
     
